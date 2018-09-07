@@ -1,0 +1,48 @@
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header {
+    text-align: center;
+}
+
+main {
+    display: grid;
+    grid-template-columns: 25px 265px 25px;
+    grid-template-rows: 25px 265px 25px;
+    text-align: center;
+}
+
+#up {
+    grid-column: 2/3;
+    grid-row: 1/2;
+}
+
+#right {
+    grid-column: 1/2;
+    grid-row: 2/3;
+    writing-mode: vertical-rl;
+    text-orientation: upright;
+}
+
+#left {
+    grid-column: 3/-1;
+    grid-row: 2/3;
+    writing-mode: vertical-rl;
+    text-orientation: upright;
+}
+
+#down {
+    grid-column: 2/3;
+    grid-row: 3/-1;
+}
+
+table {
+    grid-column: 2/3;
+    grid-row: 2/3;
+    width: 265px;
+    height: 265px;
+    text-align: center;
+}

@@ -1,0 +1,1 @@
+Lupine Journey is a game where the character is an exploerer. Your goal is to level up and have fun.

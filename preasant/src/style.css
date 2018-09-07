@@ -1,0 +1,11 @@
+body {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.drawingBoard {
+    height: 650px;
+    width: 850px;
+    background-color: black;
+}
