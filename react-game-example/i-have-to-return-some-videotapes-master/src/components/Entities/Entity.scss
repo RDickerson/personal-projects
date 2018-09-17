@@ -1,0 +1,114 @@
+@import '~styles/vars';
+
+.entity {
+
+  font: #{$cellSize}/#{$cellSize} "Apple Color Emoji";
+  z-index: 1;
+
+  .twemoji &::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: auto;
+  }
+
+  $entities: (
+    ambulance: "🚑",
+    banana: "🍌",
+    bee: "🐝",
+    bike: "🚴",
+    boots: "👢",
+    building: "🏢",
+    cactus: "🌵",
+    camel: "🐫",
+    carA: "🚗",
+    carB: "🚙",
+    chicken: "🐣",
+    chopper: "🚁",
+    cloud: "☁",
+    corn: "🌽",
+    creepsun: "🌞",
+    dancer: "💃",
+    door: "🚪",
+    elephant: "🐘",
+    fire: "🔥",
+    firetruck: "🚒",
+    fishA: "🐟",
+    fishB: "🐠",
+    flowerA: "🌻",
+    flowerB: "🌹",
+    flowerC: "🌷",
+    gator: "🐊",
+    ghost: "👻",
+    hammer: "🔨",
+    heart: "❤️",
+    houseA: "🏠",
+    houseB: "🏡",
+    invisible: "  ",
+    leavesA: "🍃",
+    leavesB: "🍂",
+    leavesC: "🌿",
+    mart: "🏪",
+    monkey: "🐒",
+    musichall: "🏫",
+    palm: "🌴",
+    person: "🏃",
+    personWalk: "🚶",
+    police: "🚓",
+    rabbit: "🐇",
+    santa: "🎅",
+    shell: "🐚",
+    shit: "💩",
+    silverware: "🍴",
+    snake: "🐍",
+    snowflake: "❄",
+    snowman: "⛄",
+    speedboat: "🚤",
+    moai: "🗿",
+    sun: "☀",
+    sunglasses: "👓",
+    tape: "📼",
+    taxi: "🚕",
+    tornado: "💨",
+    treeA: "🌲",
+    treeB: "🎄",
+    treeC: "🌳",
+    turtle: "🐢",
+    wave: "🌊",
+    willows: "🌾"
+  );
+
+  @each $entity, $value in $entities {
+    &--#{$entity}::before { content: $value; }
+
+    .twemoji &--#{$entity}::before {
+      content: '';
+      background-image: twemoji-url($value);
+    }
+  }
+
+  &--storesign--v,
+  &--storesign--i,
+  &--storesign--d,
+  &--storesign--e,
+  &--storesign--o,
+  &--storesign--s,
+  &--storesign--t,
+  &--storesign--r {
+    color: #f00;
+    text-align: center;
+    text-shadow: 1px 1px #fff, 2px 2px #333, 3px 3px #333;
+  }
+
+  &--storesign--v::before { content: "V"; }
+  &--storesign--i::before { content: "I"; }
+  &--storesign--d::before { content: "D"; }
+  &--storesign--e::before { content: "E"; }
+  &--storesign--o::before { content: "O"; }
+  &--storesign--s::before { content: "S"; }
+  &--storesign--t::before { content: "T"; }
+  &--storesign--r::before { content: "R"; }
+
+}
